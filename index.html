@@ -17,7 +17,7 @@
 	<div>
 		<center>
 			<h1>ANKUR PATEL</h1>
-			<p><i>Full-Stack Developer | Software Developer | Website Designer | Freelancer</i></p>
+			<p><i>Full-Stack Developer | Software Developer | Website Designer | Full-Time Freelancer</i></p>
 			<p>Web Application Development | Responsive Website Designing</p>
 		</center>
 	</div>
@@ -27,12 +27,19 @@
 	<br>
 	<br>
 	<center>
-		<p><small>redirecting you to <a href="https://ankurpatel.in/" style="color: #fff;">ankurpatel.in</a></small></p>
+		<p><small>redirecting you to <a href="https://ankurpatel.in/" style="color: #fff;">ankurpatel.in</a> in <span id="time">10</span></small></p>
 	</center>
 	<script type="text/javascript">
-		setTimeout(function() {
-			// window.location = "https://ankurpatel.in/";
-		}, 2000);
+		var count = 9;
+		var interval = setInterval(function() {
+			document.getElementById('time').innerHTML = count;
+			if (count == 0) {
+				clearInterval(interval);
+				window.location = "https://ankurpatel.in/";
+			} else {
+				count--;
+			}
+		}, 1000);
 	</script>
 </body>
 </html>
